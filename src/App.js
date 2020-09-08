@@ -24,18 +24,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Home/>
+        <HashRouter>
+          <div>
+            <Route exact path="/" component={Splash} />
+            <Route exact path="/Home" component={Home} />
+          </div>
+        </HashRouter>
       </div>
     );
   }
 }
 
 export default App;
-
-
-// <HashRouter>
-//   <div>
-//     <Route exact path="/" component={Splash} />
-//     <Route exact path="/Home" component={Home} />
-//   </div>
-// </HashRouter>
