@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Select, MenuItem } from '@material-ui/core';
 
 class VariantSelector extends Component {
   render() {

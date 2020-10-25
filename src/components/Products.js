@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import ReactPlayer from "react-player"
+import logo from './cgbkgrd.gif'
 
 class Products extends Component {
   render() {
@@ -22,13 +23,7 @@ class Products extends Component {
     return (
       <div className="Product-wrapper">
         <div className='player-wrapper'>
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=43sM_Q5wMVY"
-            muted={true}
-            playing={true}
-            width='100%'
-            height='100%'
-          />
+          <img src={logo} alt="loading..." />
         </div>
 
 
