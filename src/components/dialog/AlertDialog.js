@@ -67,6 +67,7 @@ class AlertDialog extends React.Component {
           return (
             <div>
               <img onClick={this.handleClickOpen} className="Product__image" src={this.props.product.images[0].src} alt={`${this.props.product.title} product shot`}/>
+              <DialogContentText id="alert-dialog-description">{this.props.product.title}</DialogContentText>
               <Dialog
                 open={this.state.open}
                 onClose={this.handleClose}

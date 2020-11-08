@@ -28,6 +28,7 @@ export default function DisplayGrid(props) {
         <Grid item xs={6}>
           <Paper className={classes.paper}>
           <DialogContentText id="alert-dialog-description">{props.product.title}</DialogContentText>
+          <DialogContentText id="alert-dialog-description">{props.product.description}</DialogContentText>
           <DialogContentText id="alert-dialog-description">£{props.product.variants[0].price}</DialogContentText>
           </Paper>
         </Grid>

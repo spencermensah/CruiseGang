@@ -16,8 +16,7 @@ html {
 
 .MuiTypography-colorTextSecondary{
   color: white !important;
-  font-size: 20px !important;
-  text-align:right !important;
+  text-align:center !important;
 }
 
 body {
