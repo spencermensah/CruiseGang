@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import VariantSelector from './VariantSelector';
 
+import AlertDialog from './dialog/AlertDialog'
+
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +39,7 @@ class Product extends Component {
       selectedVariant: selectedVariant,
       selectedVariantImage: selectedVariant.attrs.image
     });
+    console.log(target.value);
   }
 
   handleQuantityChange(event) {
@@ -60,13 +63,11 @@ class Product extends Component {
     });
     return (
       <div className="Product">
-        {this.props.product.images.length ? <img className="Product__image" src={variantImage.src} alt={`${this.props.product.title} product shot`}/> : null}
-
-        <h5 className="Product__price">£{variant.price}</h5>
-
-        {variantSelectors}
-
-        <button className="Product__buy button" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</button>
+        <AlertDialog
+          product = {this.props.product}
+          addVariantToCart = {this.props.addVariantToCart}
+          client = {this.props.client}
+          />
       </div>
     );
   }

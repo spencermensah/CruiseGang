@@ -8,8 +8,15 @@
 }
 
 .example{
-  position: relative;
-  top: 200px;
+	height: 500px;
+
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
 }
 
 
@@ -22,5 +29,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+}
+
+
+#title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }

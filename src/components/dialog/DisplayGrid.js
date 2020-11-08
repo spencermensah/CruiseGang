@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import DialogContentText from '@material-ui/core/DialogContentText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,12 +10,11 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(1),
-    textAlign: 'center',
-    height: "300px"
+    textAlign: 'center'
   },
 }));
 
-export default function SplashGrid() {
+export default function DisplayGrid(props) {
   const classes = useStyles();
 
   return (
@@ -22,12 +22,13 @@ export default function SplashGrid() {
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
-            <a href="http://localhost:3000/#/Home"><img class="gifIcon" src={require('./slashgif1.gif')} /></a>
+            <img className="Product__image" src={props.product.images[0].src} alt={`${props.product.title} product shot`}/>
           </Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
-            <a href="http://localhost:3000/#/Home"><img class="gifIcon" src={require('./slashgif2.gif')} /></a>
+          <DialogContentText id="alert-dialog-description">{props.product.title}</DialogContentText>
+          <DialogContentText id="alert-dialog-description">£{props.product.variants[0].price}</DialogContentText>
           </Paper>
         </Grid>
       </Grid>
