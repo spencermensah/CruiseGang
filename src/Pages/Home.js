@@ -5,6 +5,7 @@ import Client from 'shopify-buy';
 
 
 import logo from './assests/logo.gif';
+import bigLogo from './cgbkgrd.gif';
 
 const client = Client.buildClient({
   storefrontAccessToken: '17863866dc94c90d15e8f1ea1a96d80f',
@@ -104,6 +105,8 @@ class Home extends Component {
           }
 
           <img className="minilogo" src={logo} alt="loading..." />
+
+              <img className="biglogo" src={bigLogo} alt="loading..." />
 
         <Products
           products={this.state.products}

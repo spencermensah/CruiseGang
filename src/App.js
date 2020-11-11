@@ -4,7 +4,6 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom"
-
 import Home from "./Pages/Home"
 import Splash from "./Pages/Splash"
 

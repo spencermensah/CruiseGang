@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import ReactPlayer from "react-player"
-import logo from './cgbkgrd.gif'
+
 
 class Products extends Component {
   render() {
@@ -22,9 +22,7 @@ class Products extends Component {
 
     return (
       <div className="Product-wrapper">
-        <div className='player-wrapper'>
-          <img src={logo} alt="loading..." />
-        </div>
+
 
 
 
