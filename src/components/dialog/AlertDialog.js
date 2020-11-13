@@ -76,16 +76,9 @@ class AlertDialog extends React.Component {
                 aria-describedby="alert-dialog-description"
               >
                 <DialogContent>
-
-
-
-
-
                 <DisplayGrid
                   product = {this.props.product}
                   />
-
-
                   {variantSelectors}
                   <button className="Product__buy button" onClick={this.addItemtoCart}>Add to Cart</button>
 

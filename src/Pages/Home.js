@@ -3,6 +3,8 @@ import Products from '../components/Products';
 import Cart from '../components/Cart';
 import Client from 'shopify-buy';
 
+import DialogContentText from '@material-ui/core/DialogContentText';
+
 
 import logo from './assests/logo.gif';
 import bigLogo from './cgbkgrd.gif';
@@ -95,34 +97,40 @@ class Home extends Component {
     var basketSize = this.state.checkout.lineItems.length;
 
     return (
-      <div className="App">
+      <div>
+        <img className="biglogo" src={bigLogo} alt="loading..." />
+
+          <div className="App">
 
 
-          {!this.state.isCartOpen &&
-            <div className="App__view-cart-wrapper">
-              <button className="App__view-cart" onClick={()=> this.setState({isCartOpen: true})}>{basketSize}</button>
-            </div>
-          }
+              {!this.state.isCartOpen &&
+                <div className="App__view-cart-wrapper">
+                  <button className="App__view-cart" onClick={()=> this.setState({isCartOpen: true})}>{basketSize}</button>
+                </div>
+              }
 
-          <img className="minilogo" src={logo} alt="loading..." />
-
-              <img className="biglogo" src={bigLogo} alt="loading..." />
-
-        <Products
-          products={this.state.products}
-          client={client}
-          addVariantToCart={this.addVariantToCart}
-        />
-
-        <Cart
-          checkout={this.state.checkout}
-          isCartOpen={this.state.isCartOpen}
-          handleCartClose={this.handleCartClose}
-          updateQuantityInCart={this.updateQuantityInCart}
-          removeLineItemInCart={this.removeLineItemInCart}
-        />
+            <img className="minilogo" src={logo} alt="loading..." />
 
 
+
+            <Products
+              products={this.state.products}
+              client={client}
+              addVariantToCart={this.addVariantToCart}
+            />
+
+            <Cart
+              checkout={this.state.checkout}
+              isCartOpen={this.state.isCartOpen}
+              handleCartClose={this.handleCartClose}
+              updateQuantityInCart={this.updateQuantityInCart}
+              removeLineItemInCart={this.removeLineItemInCart}
+            />
+
+          <DialogContentText id="alert-dialog-description">© 2020, Cruise Gang</DialogContentText>
+
+
+          </div>
       </div>
     );
   }

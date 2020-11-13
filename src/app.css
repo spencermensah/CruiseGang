@@ -38,7 +38,7 @@ img {
 }
 
 .minilogo {
-  height: 150px;
+  height: 100px;
   position: fixed;
   top: -5px;
   padding: 10px;
@@ -48,9 +48,9 @@ img {
 
 .biglogo{
   display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
 }
 
 h1 {
