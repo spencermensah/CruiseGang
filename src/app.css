@@ -46,6 +46,22 @@ img {
 
 }
 
+/* .Product__image_dialog{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+} */
+
+@media only screen and (min-device-width: 400px) {
+  .Product__image_dialog{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
 .biglogo{
   display: block;
   margin-left: auto;

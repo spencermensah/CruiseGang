@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import VariantSelector from './VariantSelector';
 
 import AlertDialog from './dialog/AlertDialog'
+import FullScreenDialog from './dialog/FullScreenDialog'
 
 class Product extends Component {
   constructor(props) {
@@ -63,10 +64,11 @@ class Product extends Component {
     });
     return (
       <div className="Product">
+
         <AlertDialog
-          product = {this.props.product}
-          addVariantToCart = {this.props.addVariantToCart}
-          client = {this.props.client}
+            product = {this.props.product}
+            addVariantToCart = {this.props.addVariantToCart}
+            client = {this.props.client}
           />
       </div>
     );
@@ -74,3 +76,9 @@ class Product extends Component {
 }
 
 export default Product;
+
+// <AlertDialog
+//   product = {this.props.product}
+//   addVariantToCart = {this.props.addVariantToCart}
+//   client = {this.props.client}
+//   />

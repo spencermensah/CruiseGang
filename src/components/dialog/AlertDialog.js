@@ -3,11 +3,29 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 import DisplayGrid from './DisplayGrid';
+import Slide from '@material-ui/core/Slide';
 
 import VariantSelector from '../VariantSelector';
 
+const styles = (theme) => ({
+  appBar: {
+    position: 'relative',
+  },
+  title: {
+    marginLeft: theme.spacing(2),
+    flex: 1,
+  },
+});
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 class AlertDialog extends React.Component {
   constructor(props) {
@@ -64,23 +82,40 @@ class AlertDialog extends React.Component {
           );
         });
 
+        const { classes } = this.props;
+
           return (
             <div>
               <img onClick={this.handleClickOpen} className="Product__image" src={this.props.product.images[0].src} alt={`${this.props.product.title} product shot`}/>
               <DialogContentText id="alert-dialog-description">{this.props.product.title}</DialogContentText>
               <DialogContentText id="alert-dialog-description">£{this.props.product.variants[0].price}</DialogContentText>
               <Dialog
+                fullScreen
                 open={this.state.open}
                 onClose={this.handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                TransitionComponent={Transition}
               >
+              <AppBar className={classes.appBar}>
+                <Toolbar>
+                    <Button edge="start" color="inherit" onClick={this.handleClose} aria-label="close">
+                      Close
+                    </Button>
+                  <Typography variant="h6" className={classes.title}>
+                    {this.props.product.title}
+                  </Typography>
+                  <Button color="inherit" onClick={this.addItemtoCart}>
+                    Add To Cart
+                  </Button>
+                </Toolbar>
+              </AppBar>
                 <DialogContent>
+
                 <DisplayGrid
                   product = {this.props.product}
                   />
                   {variantSelectors}
-                  <button className="Product__buy button" onClick={this.addItemtoCart}>Add to Cart</button>
 
                 </DialogContent>
 
@@ -91,4 +126,4 @@ class AlertDialog extends React.Component {
       }
 
 
-export default AlertDialog;
+export default withStyles(styles)(AlertDialog);
