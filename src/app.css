@@ -14,6 +14,10 @@ html {
   font-size: 65%;
 }
 
+.refunds{
+  color: red;
+}
+
 .MuiTypography-colorTextSecondary{
   color: white !important;
   text-align:center !important;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import ReactPlayer from "react-player"
+import DialogContentText from '@material-ui/core/DialogContentText';
 
 
 class Products extends Component {
@@ -8,6 +9,7 @@ class Products extends Component {
     let products = this.props.products.map((product) => {
       return (
         <div>
+
           <Product
             addVariantToCart={this.props.addVariantToCart}
             client={this.props.client}
@@ -25,7 +27,7 @@ class Products extends Component {
 
 
 
-
+        <DialogContentText id="alert-dialog-description" class="refunds">No Refunds</DialogContentText>
         {products}
       </div>
     );
