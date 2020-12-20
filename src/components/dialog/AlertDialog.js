@@ -78,6 +78,7 @@ class AlertDialog extends React.Component {
               handleOptionChange={this.handleOptionChange}
               key={option.id.toString()}
               option={option}
+              product={this.props.product}
             />
           );
         });

@@ -62,6 +62,9 @@ class Product extends Component {
         />
       );
     });
+    // console.log(this.props.product.publishedAt);
+    //
+    // console.log(Object.keys(this.props.product));
     return (
       <div className="Product">
 

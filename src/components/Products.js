@@ -6,7 +6,9 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 
 class Products extends Component {
   render() {
-    let products = this.props.products.map((product) => {
+    let products = this.props.products
+    .slice(0).reverse()
+    .map((product) => {
       return (
         <div>
 
@@ -24,9 +26,6 @@ class Products extends Component {
 
     return (
       <div className="Product-wrapper">
-
-
-
         <DialogContentText id="alert-dialog-description" class="refunds">No Refunds Unless Item Is Damaged</DialogContentText>
         {products}
       </div>
