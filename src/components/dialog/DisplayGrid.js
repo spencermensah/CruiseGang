@@ -31,6 +31,7 @@ export default function DisplayGrid(props) {
       <Paper className={classes.paper}>
       <DialogContentText id="alert-dialog-description">{props.product.title}</DialogContentText>
       <DialogContentText id="alert-dialog-description">{props.product.description}</DialogContentText>
+      <DialogContentText id="alert-dialog-description" class="refunds">No Refunds Unless Item Is Damaged</DialogContentText>
       </Paper>
       <Paper className={classes.paper}>
          <img className="Product__image_dialog" src={props.product.images[0].src} alt={`${props.product.title} product shot`}/>

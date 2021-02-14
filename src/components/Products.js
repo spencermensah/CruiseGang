@@ -26,7 +26,6 @@ class Products extends Component {
 
     return (
       <div className="Product-wrapper">
-        <DialogContentText id="alert-dialog-description" class="refunds">No Refunds Unless Item Is Damaged</DialogContentText>
         {products}
       </div>
     );
