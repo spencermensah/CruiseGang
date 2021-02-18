@@ -4,9 +4,12 @@ import Cart from '../components/Cart';
 import Client from 'shopify-buy';
 
 import DialogContentText from '@material-ui/core/DialogContentText';
+import FadeIn from 'react-fade-in';
 
 
-import logo from './assests/logo.gif';
+import ballseye from './assests/logo/ballseye.png';
+import double from './assests/logo/double.png';
+import flame from './assests/logo/flame.png';
 import bigLogo from './cgbkgrd.gif';
 
 const client = Client.buildClient({
@@ -109,7 +112,11 @@ class Home extends Component {
                 </div>
               }
 
-            <img className="minilogo" src={logo} alt="loading..." />
+            <div>
+              <img className="ballseye" src={ballseye} alt="loading..." />
+            </div>
+
+
 
 
 

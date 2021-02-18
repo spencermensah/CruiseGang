@@ -41,13 +41,28 @@ img {
   max-height: 100%;
 }
 
-.minilogo {
+.ballseye {
   height: 100px;
   position: fixed;
   top: -5px;
   padding: 10px;
   z-index: 4;
+}
 
+.double {
+  height: 100px;
+  position: fixed;
+  top: 55px;
+  padding: 10px;
+  z-index: 4;
+}
+
+.flame {
+  height: 100px;
+  position: fixed;
+  top: 130px;
+  padding: 10px;
+  z-index: 4;
 }
 
 /* .Product__image_dialog{
