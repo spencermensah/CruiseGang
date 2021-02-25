@@ -37,6 +37,7 @@ export default function DisplayGrid(props) {
               naturalSlideHeight={500}
               hasMasterSpinner
               infinite
+              isPlaying
             >
               <Slider className={s.slider}>
                 {props.product.images.map((text, index) => (
