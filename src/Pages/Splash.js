@@ -20,7 +20,7 @@ class Splash extends Component {
   render() {
     return (
       <div class='example'>
-        <a href="https://cruisegang.herokuapp.com/#/Home">
+        <a href="https://www.cruisegang.org/#/Home">
             <img id='logo'  src={logo} alt="loading..." />
             <img id='title'  src={title} alt="loading..." />
         </a>
