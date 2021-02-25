@@ -3,8 +3,6 @@ import { Select, MenuItem } from '@material-ui/core';
 
 class VariantSelector extends Component {
   render() {
-    console.log(Object.keys(this.props.option.values["0"]["value"]["0"]));
-    console.log(this.props.option.values["0"]["value"]);
     return (
       <select
         className="Product__option"

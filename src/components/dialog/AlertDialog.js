@@ -12,6 +12,7 @@ import DisplayGrid from './DisplayGrid';
 import Slide from '@material-ui/core/Slide';
 
 import VariantSelector from '../VariantSelector';
+import NativeSelects from '../NativeSelects';
 
 const styles = (theme) => ({
   appBar: {
@@ -63,7 +64,7 @@ class AlertDialog extends React.Component {
       handleOptionChange(event) {
         const target = event.target
         let selectedOptions = this.state.selectedOptions;
-        selectedOptions[target.name] = target.value;
+        selectedOptions["Size"] = target.value;
         const selectedVariant = this.props.client.product.helpers.variantForOptions(this.props.product, selectedOptions)
         this.setState({
           selectedVariant: selectedVariant,
@@ -75,6 +76,17 @@ class AlertDialog extends React.Component {
         let variantSelectors = this.props.product.options.map((option) => {
           return (
             <VariantSelector
+              handleOptionChange={this.handleOptionChange}
+              key={option.id.toString()}
+              option={option}
+              product={this.props.product}
+            />
+          );
+        });
+
+        let variantSelectorsMat = this.props.product.options.map((option) => {
+          return (
+            <NativeSelects
               handleOptionChange={this.handleOptionChange}
               key={option.id.toString()}
               option={option}
@@ -106,7 +118,7 @@ class AlertDialog extends React.Component {
                   <Typography variant="h6" className={classes.title}>
                     {this.props.product.title}
                   </Typography>
-                  <Button color="inherit" onClick={this.addItemtoCart}>
+                  <Button style={{color:"white",backgroundColor:"red"}} onClick={this.addItemtoCart}>
                     Add To Cart
                   </Button>
                 </Toolbar>
@@ -116,7 +128,7 @@ class AlertDialog extends React.Component {
                 <DisplayGrid
                   product = {this.props.product}
                   />
-                  {variantSelectors}
+                  {variantSelectorsMat}
 
                 </DialogContent>
 

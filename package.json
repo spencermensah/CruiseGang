@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.2",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
     "react-3d-viewer": "^1.0.12",
     "react-dom": "^16.13.1",
